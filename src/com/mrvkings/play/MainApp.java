@@ -3,8 +3,13 @@ package com.mrvkings.play;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import com.mrvkings.entity.Employee;
+import com.mrvkings.entity.StringEntity;
+import com.mrvkings.entity.StringEntityDemo;
+
 public class MainApp extends SwitchMethod implements DoWhileLoop{
 	static Scanner sc =new Scanner(System.in);
+	static String[] str= {"abc","def","ghi","jkl","mno","pqr","stu"};
 	
 	public static void main(String[] args) {
 		System.out.println("Hello World");
@@ -32,7 +37,15 @@ public class MainApp extends SwitchMethod implements DoWhileLoop{
 		
 		
 		//--------------Do while loop-----------------
-		MainApp.printDoWhileLoop();
+		printDoWhileLoop();
+		
+		//--------------For loop----------------------
+		
+		forLoopFunction();
+		
+		//--------------For each loop-----------------
+		
+		forEachLoop();
 		
 	}
 	public static void printDoWhileLoop() {
@@ -42,9 +55,34 @@ public class MainApp extends SwitchMethod implements DoWhileLoop{
 		do {
 			
 			System.out.println("do: "+i);
-			++i;
+			i++;
+			//System.out.println(i);
 		}while(i<10);
 		
 	}
+	public static void forLoopFunction( ) {
+		for (int i=0;i<10;i++) {
+			System.out.println(i);
+		}
+	}
+	public static void forEachLoop() {
+		for(String s:str) {
+			System.out.println(s);
+		}
+//		-------------------Entity class---------------
+		
+		Employee e=new Employee(1,"venky",123456789);
+		Employee e1=new Employee();
+		Employee e2=new Employee(2);
+		
+		System.out.println(e.getPhNumber());
+		System.out.println(e.toString());
+		
+//		-----------------------String entity---------------
+		StringEntityDemo se=new StringEntityDemo();
+		System.out.println(se.toString());
+	}
+
+
 
 }
