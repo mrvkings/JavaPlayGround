@@ -81,6 +81,10 @@ public class MainApp extends SwitchMethod implements DoWhileLoop{
 //		-----------------------String entity---------------
 		StringEntityDemo se=new StringEntityDemo();
 		System.out.println(se.toString());
+		
+
+		
+		
 	}
 
 
